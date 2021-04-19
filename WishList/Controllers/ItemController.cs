@@ -24,7 +24,7 @@ namespace WishList.Controllers
         {
             return View("Create");
         }
-        [HttpPost]
+        [HttpGet]
         public IActionResult Create(Models.Item item)
         {
             _context.Items.Add(item);
