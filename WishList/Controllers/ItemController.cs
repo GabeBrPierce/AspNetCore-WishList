@@ -20,11 +20,12 @@ namespace WishList.Controllers
             var model = _context.Items;
             return View("Index", model);
         }
+        [HttpGet]
         public IActionResult Create()
         {
             return View("Create");
         }
-        [HttpGet]
+        
         public IActionResult Create(Models.Item item)
         {
             _context.Items.Add(item);
